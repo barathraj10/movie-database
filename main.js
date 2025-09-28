@@ -22,6 +22,10 @@ app.use(express.urlencoded({extended:true}));  //To parse URL-encoded request bo
 connectDB();
 
 //Routes
+app.get("/", (req,res)=>{
+    res.send("Welcome to Movie Database API");
+})
+
 app.use("/movies", router);
 
 //Start the server
